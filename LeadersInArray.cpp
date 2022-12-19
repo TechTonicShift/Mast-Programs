@@ -22,10 +22,11 @@ void leader(int arr[],int n){
 void optimizedLeader(int arr[],int n){
     int leader=arr[n-1];
     cout<<leader<<endl;
+    int curr_leader=arr[n-1];
     for(int i=n-2;i>=0;i--){
-        if(arr[i]>arr[i+1]){
-            leader=arr[i];
-            cout<<leader<<endl;
+        if(arr[i]>curr_leader){
+            curr_leader=arr[i];
+            cout<<curr_leader<<endl;
         }
     }
 }
